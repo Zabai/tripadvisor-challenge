@@ -21,6 +21,7 @@
       "@/constants/*": ["constants/*"],
       "@/features/*": ["features/*"],
       "@/hooks/*": ["hooks/*"],
+      "@/stores/*": ["stores/*"],
       "@/types/*": ["types/*"],
       "@/utils/*": ["utils/*"]
     }
