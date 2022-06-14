@@ -24,6 +24,10 @@ const FOURSQUARE_PLACES = {
       "rating",
     ],
   },
+  QUERIES: {
+    PLACE_DETAILS: "PLACE_DETAILS",
+    PLACE_SEARCH: "PLACE_SEARCH",
+  },
 };
 
 export default FOURSQUARE_PLACES;
