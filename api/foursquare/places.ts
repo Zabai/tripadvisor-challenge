@@ -25,7 +25,7 @@ export async function getPlacesByLocationAndCategory(
     .catch(() => []);
 }
 
-export async function getPlaceDetailsById(placeId: string) {
+export async function fetchPlaceDetailsById(placeId: string) {
   const queryString = new URLSearchParams({
     fields: FIELDS.PLACE_DETAILS.join(","),
   }).toString();
