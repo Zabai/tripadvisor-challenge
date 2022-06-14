@@ -19,7 +19,7 @@ export async function getPlacesByLocationAndCategory(
     near: location,
   }).toString();
 
-  return await fetch(ENDPOINTS.PLACE_SEARCH + queryString, baseOptions)
+  return await fetch(`${ENDPOINTS.PLACE_SEARCH}?${queryString}`, baseOptions)
     .then((response) => response.json())
     .then((response: PlaceSearchApiResponse) => response.results)
     .catch(() => []);
@@ -31,7 +31,7 @@ export async function getPlaceDetailsById(placeId: string) {
   }).toString();
 
   return await fetch(
-    ENDPOINTS.PLACE_DETAILS.replace("{id}", placeId) + queryString,
+    `${ENDPOINTS.PLACE_DETAILS.replace("{id}", placeId)}?${queryString}`,
     baseOptions
   )
     .then((response) => response.json())
