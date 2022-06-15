@@ -12,7 +12,6 @@ export interface PlaceApiEntity {
     name: string;
   }>;
   description: string;
-  distance: number;
   email: string;
   fsq_id: string;
   geocodes: { main: { latitude: number; longitude: number } };
@@ -36,7 +35,7 @@ export interface PlaceApiEntity {
   website: string;
 }
 
-export interface PlaceSearchApiResponse {
+export type PlaceSearchApiResponse = {
   results: Array<
     Pick<
       PlaceApiEntity,
@@ -50,4 +49,17 @@ export interface PlaceSearchApiResponse {
       | "rating"
     >
   >;
-}
+};
+
+export type PlaceDetailsApiResponse = Pick<
+  PlaceApiEntity,
+  | "categories"
+  | "fsq_id"
+  | "geocodes"
+  | "location"
+  | "name"
+  | "photos"
+  | "rating"
+  | "tel"
+  | "website"
+>;

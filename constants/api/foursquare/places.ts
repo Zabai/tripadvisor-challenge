@@ -22,6 +22,8 @@ const FOURSQUARE_PLACES = {
       "name",
       "photos",
       "rating",
+      "tel",
+      "website",
     ],
   },
   QUERIES: {
