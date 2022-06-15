@@ -37,7 +37,7 @@ export default function PlaceDetails() {
       <Container maxWidth="lg">
         <Header />
 
-        <Grid container mb={4} spacing={4}>
+        <Grid container mb={4} columnSpacing={4} rowSpacing={2}>
           <Grid item gap={6} sm={12} md={7}>
             <Paper
               elevation={6}
@@ -53,9 +53,6 @@ export default function PlaceDetails() {
                 rating={data.rating}
               />
             </Paper>
-            <Paper elevation={6} sx={{ p: "12px" }}>
-              <PlaceMap geocodes={data.geocodes} id="map" />
-            </Paper>
           </Grid>
 
           <Grid item sm={12} md={5}>
@@ -66,6 +63,12 @@ export default function PlaceDetails() {
                   src: `${prefix}original${suffix}`,
                 }))}
               />
+            </Paper>
+          </Grid>
+
+          <Grid item sm={12}>
+            <Paper elevation={6} sx={{ p: "12px" }}>
+              <PlaceMap geocodes={data.geocodes} id="map" />
             </Paper>
           </Grid>
         </Grid>

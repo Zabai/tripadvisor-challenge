@@ -39,7 +39,7 @@ export default function PlaceMap({ geocodes: { main }, id }: Props) {
         Location
       </Typography>
       {main ? (
-        <Box id={id} height={350} />
+        <Box id={id} height={500} />
       ) : (
         <Typography>Not available</Typography>
       )}
