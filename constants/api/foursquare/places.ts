@@ -9,10 +9,13 @@ const FOURSQUARE_PLACES = {
     PLACE_DETAILS: [
       "categories",
       "fsq_id",
+      "geocodes",
       "location",
       "name",
       "photos",
       "rating",
+      "tel",
+      "website",
     ],
     PLACE_SEARCH: [
       "categories",
@@ -22,8 +25,6 @@ const FOURSQUARE_PLACES = {
       "name",
       "photos",
       "rating",
-      "tel",
-      "website",
     ],
   },
   QUERIES: {
