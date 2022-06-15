@@ -2,6 +2,7 @@ import { fetchPlaceDetailsById } from "@/api/foursquare/places";
 import Header from "@/components/header";
 import Layout from "@/components/layout";
 import FOURSQUARE_PLACES from "@/constants/api/foursquare/places";
+import PlaceImages from "@/features/details/placeImages";
 import PlaceSummary from "@/features/details/placeSummary";
 import PlaceSummaryBar from "@/features/details/placeSummaryBar";
 import useDetails from "@/hooks/useDetails";
@@ -46,6 +47,17 @@ export default function PlaceDetails() {
                 categories={data.categories}
                 fsq_id={data.fsq_id}
                 rating={data.rating}
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item sm={12} md={5}>
+            <Paper elevation={3}>
+              <PlaceImages
+                images={data.photos.map(({ id, prefix, suffix }) => ({
+                  id,
+                  src: `${prefix}original${suffix}`,
+                }))}
               />
             </Paper>
           </Grid>
