@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Layout from "@/components/layout";
 import FOURSQUARE_PLACES from "@/constants/api/foursquare/places";
 import PlaceSummary from "@/features/details/placeSummary";
+import PlaceSummaryBar from "@/features/details/placeSummaryBar";
 import useDetails from "@/hooks/useDetails";
 import { Container, Grid, Paper } from "@mui/material";
 import { GetServerSidePropsContext } from "next";
@@ -40,6 +41,11 @@ export default function PlaceDetails() {
               <PlaceSummary
                 address={data.location.formatted_address}
                 name={data.name}
+              />
+              <PlaceSummaryBar
+                categories={data.categories}
+                fsq_id={data.fsq_id}
+                rating={data.rating}
               />
             </Paper>
           </Grid>
