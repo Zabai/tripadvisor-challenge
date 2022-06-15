@@ -2,6 +2,7 @@
 
 const LOCAL = {
   FOURSQUARE_API_KEY: "fsq34TPp/EXBih/UPVihtW379KdoXGKRbJxGR6oTMBi0I1M=",
+  GOOGLE_MAPS_API_KEY: "AIzaSyAzLHO3z9rKipljxbO8UfjEbXsw6yvbV6c",
 };
 
 export default LOCAL;
