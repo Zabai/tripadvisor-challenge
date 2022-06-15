@@ -13,8 +13,8 @@ export default function PlaceSummary({ address, name }: Props) {
         {name}
       </Typography>
       <Stack direction="row">
-        <LocationOnRounded fontSize="small" />
-        <Typography mb="8px" variant="subtitle2">
+        <LocationOnRounded fontSize="small" sx={{ ml: 0.25 }} />
+        <Typography mb={1} ml={1} variant="subtitle2">
           {address}
         </Typography>
       </Stack>

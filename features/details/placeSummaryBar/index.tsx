@@ -2,7 +2,7 @@ import IconChip from "@/components/iconChip";
 import useFavorites from "@/hooks/useFavorites";
 import { PlaceApiEntity } from "@/types/api/foursquare/places";
 import { FavoriteBorderRounded, FavoriteRounded } from "@mui/icons-material";
-import { Divider, IconButton, Rating, Stack } from "@mui/material";
+import { IconButton, Rating, Stack } from "@mui/material";
 
 type Props = Pick<PlaceApiEntity, "categories" | "fsq_id" | "rating">;
 
@@ -24,8 +24,7 @@ export default function PlaceSummaryBar({ categories, fsq_id, rating }: Props) {
       </IconButton>
 
       <Rating readOnly value={Math.round(rating / 2)} />
-      <Divider variant="middle" />
-      <Stack direction="row" spacing={1}>
+      <Stack direction="row" ml={1.5} spacing={1}>
         {categories.map(({ icon, id, name }) => (
           <IconChip
             iconSrc={`${icon.prefix}32${icon.suffix}`}
