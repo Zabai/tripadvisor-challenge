@@ -8,6 +8,8 @@ const FOURSQUARE_PLACES = {
   FIELDS: {
     PLACE_DETAILS: [
       "categories",
+      "email",
+      "fax",
       "fsq_id",
       "geocodes",
       "location",

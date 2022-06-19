@@ -13,6 +13,7 @@ export interface PlaceApiEntity {
   }>;
   description: string;
   email: string;
+  fax: string;
   fsq_id: string;
   geocodes: { main: { latitude: number; longitude: number } };
   location: {
@@ -54,6 +55,8 @@ export type PlaceSearchApiResponse = {
 export type PlaceDetailsApiResponse = Pick<
   PlaceApiEntity,
   | "categories"
+  | "email"
+  | "fax"
   | "fsq_id"
   | "geocodes"
   | "location"
