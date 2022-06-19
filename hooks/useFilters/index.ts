@@ -18,9 +18,9 @@ export default function useFilters() {
             getCategoryIdsFromQueryString(query.categories.toString())
           )
         );
-      setSearchTerm(query.term?.toString() ?? searchTerm);
+      query.term && setSearchTerm(query.term.toString());
     }
-  }, [isReady]);
+  }, [isReady, query]);
 
   const toggleCategory = (categoryId: number) =>
     setCategories(
