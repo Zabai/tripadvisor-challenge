@@ -2,6 +2,7 @@ import { fetchPlaceDetailsById } from "@/api/foursquare/places";
 import Header from "@/components/header";
 import Layout from "@/components/layout";
 import FOURSQUARE_PLACES from "@/constants/api/foursquare/places";
+import PlaceContact from "@/features/details/placeContact";
 import PlaceImages from "@/features/details/placeImages";
 import PlaceMap from "@/features/details/placeMap";
 import PlaceSummary from "@/features/details/placeSummary";
@@ -39,10 +40,7 @@ export default function PlaceDetails() {
 
         <Grid container mb={4} columnSpacing={4} rowSpacing={2}>
           <Grid item gap={6} sm={12} md={7}>
-            <Paper
-              elevation={6}
-              sx={{ height: "250px", mb: "12px", p: "12px" }}
-            >
+            <Paper elevation={6} sx={{ mb: "12px", p: "12px" }}>
               <PlaceSummary
                 address={data.location.formatted_address}
                 name={data.name}
@@ -51,6 +49,14 @@ export default function PlaceDetails() {
                 categories={data.categories}
                 fsq_id={data.fsq_id}
                 rating={data.rating}
+              />
+            </Paper>
+            <Paper elevation={6} sx={{ mb: "12px", p: "12px" }}>
+              <PlaceContact
+                email={data.email}
+                fax={data.fax}
+                tel={data.tel}
+                website={data.website}
               />
             </Paper>
           </Grid>
