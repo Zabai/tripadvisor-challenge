@@ -13,7 +13,7 @@ export default function PlaceImages({ images }: Props) {
     );
 
   return (
-    <ImageList cols={3} gap={2} sx={{ marginTop: 0 }}>
+    <ImageList cols={3} gap={2}>
       {images.map(({ id, src }) => (
         <ImageListItem key={id}>
           <Image

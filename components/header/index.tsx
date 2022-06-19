@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <Stack alignItems="center" mt="2rem">
+    <Stack alignItems="center" mt={2} mb={1}>
       <Link href="/">
         <Typography
           component="div"

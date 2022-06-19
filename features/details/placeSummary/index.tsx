@@ -9,7 +9,7 @@ type Props = {
 export default function PlaceSummary({ address, name }: Props) {
   return (
     <Box>
-      <Typography marginBottom="4px" variant="h3">
+      <Typography mb="4px" variant="h3">
         {name}
       </Typography>
       <Stack direction="row">
